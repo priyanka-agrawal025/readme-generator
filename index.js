@@ -2,11 +2,12 @@ const inquirer = require('inquirer');
 const fs = require('fs/promises')
 
 function generateReadme(answers) {
-    const { repository } = answers;
+    const { repository, description, installation, usage, contribution, license, badge, feature } = answers;
     return `# ${repository}
 ## Description
+${description}
     
-## Table of Contents (Optional)
+## Table of Contents 
     
 - [Installation](#installation)
 - [Usage](#usage)
@@ -14,26 +15,21 @@ function generateReadme(answers) {
 - [License](#license)
     
 ## Installation
-    
+${installation}
 ## Usage
-    
+${usage}
 ![alt text](assets/images/screenshot.png)
     
 ## Credits
-    
+${contribution}
 ## License
-    
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+${license}
     
 ## Badges
-    
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-    
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+${badge}
     
 ## Features
-    
-If your project has a lot of features, list them here.
+$${feature}
     
 ## How to Contribute`
 }
@@ -46,6 +42,41 @@ inquirer
             name: 'repository',
             message: 'What is the title of your repository?'
         },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'A short description of your application...'
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'What is the installation process for this application (if any is required)?'
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Input a screenshot of your application using Markdown syntax (![alt text](assets/images/screenshot.png))'
+        },
+        {
+            type: 'input',
+            name: 'contribution',
+            message: 'If there are any contributors, list them here...'
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Add your license here...'
+        },
+        {
+            type: 'input',
+            name: 'badge',
+            message: 'Add your badge/s here...'
+        },
+        {
+            type: 'input',
+            name: 'feature',
+            message: 'If your application has any special features, describe them here...'
+        }
     ])
     .then((answers) => {
         const newReadme = generateReadme(answers);
@@ -55,3 +86,5 @@ inquirer
             console.log("Profile Saved!!"))
             .catch(error => `An error occurred: ${error}`);
     })
+
+    
