@@ -8,7 +8,7 @@ This is a command line application, which will prompt terminal questions to dyna
 + The NPM package, Inquirer (version ^8.2.4) must be installed for this application to function accurately
 
 ## Usage
-![Screeshot of Application](assets/images/readme.png]
+![Screeshot of Application](assets/images/readmegen.png]
 
 ## Credits
 + There were no collaborators on this project
