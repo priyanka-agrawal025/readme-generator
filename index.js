@@ -81,7 +81,7 @@ inquirer
     .then((answers) => {
         const newReadme = generateReadme(answers);
         fs.removeFile;
-        fs.writeFile("README.md", newReadme)
+        fs.writeFile("READMEdynamic.md", newReadme)
             .then(() =>
             console.log("Profile Saved!!"))
             .catch(error => `An error occurred: ${error}`);
