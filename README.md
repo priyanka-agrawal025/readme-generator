@@ -8,7 +8,10 @@ This is a command line application, which will prompt terminal questions to dyna
 + The NPM package, Inquirer (version ^8.2.4) must be installed for this application to function accurately
 
 ## Usage
-![Screeshot of Application](assets/images/readmegen.png]
+![Screeshot](assets/images/readmegen.png)
+
++ Link to Screencastify: https://drive.google.com/file/d/14tkfKsrH7NMiAage6d3a_Xp3OTINkOIW/view
++ Link to Github Repo: https://github.com/priyanka-agrawal025/readme-generator
 
 ## Credits
 + There were no collaborators on this project
@@ -20,4 +23,4 @@ This is a command line application, which will prompt terminal questions to dyna
 ![Badge Image](https://img.shields.io/github/license/priyanka-agrawal025/readme-generator)
 
 ## Features
-+Dyanmically generated Markdown file
++ Dyanmically generated Markdown file
